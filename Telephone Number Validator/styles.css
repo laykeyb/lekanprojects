@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #484881;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    height: 10%;
+    padding: 7px 0;
+}
+
+button {
+    width: 40%;
+    border-radius: 0;
+    font-size: 1.2rem;
+}
+
+.phone-outer {
+    background-color: black;
+    height: 80vh;
+    width: 25%;
+    min-width: 300px;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone-inner {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.camera-container {
+    background-color: black;
+    height: 7%;
+}
+.camera {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: azure;
+    margin: auto;
+}
+.phone-screen {
+    background-color: whitesmoke;
+    height: calc(100% - (7% + 10%));
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+    gap: 20px;
+}
+.phone-screen>input {
+    width: 80%;
+    min-height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+#user-input:focus {
+    outline: 2px solid orange;
+}
+
+#results-div {
+    overflow-y: auto;
+    -webkit-scrollbar: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10px;
+}
+p {
+    font-size: 1.2rem;
+}
+.success {
+    color: rgb(9, 75, 9);
+}
+.failure {
+    color: rgb(238, 166, 31);
+}

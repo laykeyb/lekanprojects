@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins",Helvetica, sans-serif;
+    color: white;
+}
+
+#navbar {
+    width: 100%;
+    height: 8vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(179, 42, 42);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 0.5rem;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav>ul>li {
+    display: block;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+}
+
+li>a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+nav>ul>li:hover {
+    background-color: rgb(75, 75, 131);
+    color: white;
+    cursor: pointer;
+}
+
+#welcome-section {
+    padding-top: 80px;
+    background-color: black;
+    background: repeating-circular-gradient(62deg, black 0%, grey 10%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.375rem;
+}
+
+.job-description {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: rgb(179, 42, 42);
+}
+
+#projects {
+    width: 100%;
+    text-align: center;
+    background-color: #2e4ba8;
+    font-weight: normal;
+    font-size: 1.5rem;
+    padding: 100px 10px;
+
+}
+
+.project-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 .underline-text {
+    position: relative;
+    display: inline-block;
+}
+
+h2 .underline-text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    border-bottom: 1px solid white;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5vh;
+    place-items: center;
+    margin-bottom: 7vh;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-tile {
+    max-height: 500px;
+    text-decoration: none;
+    color: white;
+}
+
+.img-title-container {
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    width: 100px;
+    height: 2em;
+    margin: 0 auto 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 500ms;
+}
+button:hover {
+    background-color: rgb(179, 42, 42);;
+}
+#contact-section {
+    width: 100%;
+    height: 60vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.contact {
+    width: 100%;
+    height: 69vh;
+    background-color: #333;
+}
+
+.contact-title-text {
+    font-size: 3.375rem;
+    font-weight: 600;
+}
+
+.contact-paragraph {
+    font-style: italic;
+}
+
+i {
+    display: inline;
+}
+
+.contact-icons-wrapper {
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    justify-content: center;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#contact-section>article {
+    margin-bottom: 5vh;
+}
+
+.contact-icons-wrapper>a:hover {
+    transform: translateY(20px);
+    transition: 0.5s ease-in-out;
+    
+}
+
+.img-title::before {
+    content: "</ ";
+    opacity: 0;
+    color: rgb(179, 42, 42);
+    transition: opacity 0.5s;
+}
+
+.img-title::after {
+    content: " >";
+    opacity: 0;
+    color: rgb(179, 42, 42);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project-tile:hover {
+    .img-title::before {
+        opacity: 1;
+    }
+
+    .img-title::after {
+        opacity: 1;
+    }
+}
+
+.contact-title-text {
+    margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #navbar {
+        justify-content: flex-end;
+        height: 10vh;
+    }
+
+    h1 {
+        font-size: 5.063rem;
+    }
+
+    .job-description {
+        font-size: 3.375rem;
+    }
+
+    .contact-title-text {
+        font-size: 5.063rem;
+    }
+
+    .contact-paragraph {
+        font-size: 1.5rem;
+    }
+
+    .project-text {
+        font-size: 3.375rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 5vw;
+    }
+
+    .project-tile {
+        height: calc(100vh - 6rem);
+    }
+
+    #contact-section {
+        height: 90vh;
+    }
+
+    .contact-icons-wrapper {
+        flex-wrap: nowrap;
+    }
+
+}
